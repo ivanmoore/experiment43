@@ -1,9 +1,11 @@
+def mapping = readFile 'README.md'
+
 stage 'configurish'
 node {
     stage 'buildingish' 
     node {
         echo 'zoom'
-        echo readFile 'README.md'
+        echo mapping
     }
 
     stage 'deployish'
