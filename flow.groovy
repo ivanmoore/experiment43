@@ -1,12 +1,14 @@
-def mapping = readFile 'README.md'
-
 stage 'configurish'
 node {
     stage 'buildingish' 
     node {
-        echo 'zoom'
-        echo mapping
+        def ttt = thung()
+        echo "thing was ${ttt}"
     }
 
     stage 'deployish'
+}
+
+def thung(){
+    readFile('README.md')
 }
