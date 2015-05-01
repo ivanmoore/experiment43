@@ -6,8 +6,10 @@ node {
         def ttt = thung()
         if (cond()) {
         	echo "thing was ${ttt}"
+                stage 'clever'
         } else {
                 echo "did not like that"
+                stage 'tricky'
         }
     }
 
