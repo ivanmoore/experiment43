@@ -1,6 +1,7 @@
 stage 'configurish'
 node {
-    stage 'buildingish' {
+    stage 'buildingish' 
+    node {
         echo 'zoom'
     }
 
