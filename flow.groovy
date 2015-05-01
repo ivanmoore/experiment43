@@ -1,19 +1,16 @@
-def ttt = thung()
-
-if (cond()) {
-    echo "thing was ${ttt}"
-    stage 'clever'
-} else {
-    echo "did not like that"
-    stage 'tricky'
-}
-
 stage 'configurish'
 node {
     stage 'buildingish' 
     node {
         git url: 'https://github.com/ivanmoore/experiment43.git'
-        echo 'something'
+        def ttt = thung()
+        if (cond()) {
+        	echo "thing was ${ttt}"
+                stage 'clever'
+        } else {
+                echo "did not like that"
+                stage 'tricky'
+        }
     }
 
     stage 'deployish'
